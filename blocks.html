@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schmutz Blocks</title>
+    <link rel="stylesheet" href="./css/schmutz-sass.css">
+</head>
+
+<body class="background-gray-12">
+    <p>The grid system in Schmutz is called blocks and is on a scale of 1-12 </p>
+    <p>The parent div needs a class of blocks (or blocks-x) reverse-blocks-x, blocks-y or reverse-blocks-y</p>
+    <h2>Blocks</h2>
+    <h3>Parent div has class "blocks-x" or just "blocks" for a horizontal set of blocks. Each block in this row has the
+        same defined height and width. Extra space is divided up between the blocks (like margin)</h3>
+    <div class="blocks">
+        <div class="w-8 h-8 background-red-0"></div>
+        <div class="w-8 h-8 background-red-1"></div>
+        <div class="w-8 h-8 background-red-2"></div>
+        <div class="w-8 h-8 background-red-3"></div>
+        <div class="w-8 h-8 background-red-4"></div>
+        <div class="w-8 h-8 background-red-5"></div>
+        <div class="w-8 h-8 background-red-6"></div>
+        <div class="w-8 h-8 background-red-7"></div>
+        <div class="w-8 h-8 background-red-8"></div>
+        <div class="w-8 h-8 background-red-9"></div>
+        <div class="w-8 h-8 background-red-10"></div>
+        <div class="w-8 h-8 background-red-11"></div>
+        <div class="w-8 h-8 background-red-12"></div>
+    </div>
+    <h3>All children have the same definied height and width. Parent div has class blocks-break. Notice only blocks that
+        can't fit on a line move to the next and
+        have as much space between them as possible.</h3>
+    <div class="blocks blocks-break">
+        <div class="w-8 h-8 background-red-0"></div>
+        <div class="w-8 h-8 background-red-1"></div>
+        <div class="w-8 h-8 background-red-2"></div>
+        <div class="w-8 h-8 background-red-3"></div>
+        <div class="w-8 h-8 background-red-4"></div>
+        <div class="w-8 h-8 background-red-5"></div>
+        <div class="w-8 h-8 background-red-6"></div>
+        <div class="w-8 h-8 background-red-7"></div>
+        <div class="w-8 h-8 background-red-8"></div>
+        <div class="w-8 h-8 background-red-9"></div>
+        <div class="w-8 h-8 background-red-10"></div>
+        <div class="w-8 h-8 background-red-11"></div>
+        <div class="w-8 h-8 background-red-12"></div>
+    </div>
+    <h3>All children have the same definied height and width. Parent div has class reverse-x-blocks.</h3>
+    <div class="reverse-x-blocks">
+        <div class="w-8 h-8 background-red-0"></div>
+        <div class="w-8 h-8 background-red-1"></div>
+        <div class="w-8 h-8 background-red-2"></div>
+        <div class="w-8 h-8 background-red-3"></div>
+        <div class="w-8 h-8 background-red-4"></div>
+        <div class="w-8 h-8 background-red-5"></div>
+        <div class="w-8 h-8 background-red-6"></div>
+        <div class="w-8 h-8 background-red-7"></div>
+        <div class="w-8 h-8 background-red-8"></div>
+        <div class="w-8 h-8 background-red-9"></div>
+        <div class="w-8 h-8 background-red-10"></div>
+        <div class="w-8 h-8 background-red-11"></div>
+        <div class="w-8 h-8 background-red-12"></div>
+    </div>
+
+    <h3>y-blocks</h3>
+    <div class="blocks">
+        <div class="y-blocks">
+            <div class="blocks w-8 h-8 background-green-3 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-4 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-5 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-6"></div>
+        </div>
+        <h4> &lt-- y-blocks</h4>
+        <h4></h4>
+        <h4></h4>
+        <h4> reverse-y-blocks --&gt</h4>
+        <div class="reverse-y-blocks">
+            <div class="blocks w-8 h-8 background-green-3 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-4 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-5 text-white"></div>
+            <div class="blocks w-8 h-8 background-green-6"></div>
+        </div>
+    </div>
+
+    <h3>1-12 Blocks Scale. Blocks should add up to 12. Parent div has class blocks.</h3>
+    <div class="blocks">
+        <div class="blocks-1 w-8 h-8 background-blue-0 text-white">blocks-1</div>
+        <div class="blocks-3 w-8 h-8 background-blue-2 text-white">blocks-3</div>
+        <div class="blocks-2 w-8 h-8 background-blue-5 text-white">blocks-2</div>
+        <div class="blocks-4 w-8 h-8 background-blue-8">blocks-4</div>
+        <div class="blocks-2 w-8 h-8 background-blue-11">blocks-2</div>
+    </div>
+    <h3>For no space between blocks, add full-blocks to the parent elemnt.</h3>
+    <div class="blocks full-blocks">
+        <div class="blocks-1 w-8 h-8 background-blue-0 text-white">blocks-1</div>
+        <div class="blocks-3 w-8 h-8 background-blue-2 text-white">blocks-3</div>
+        <div class="blocks-2 w-8 h-8 background-blue-5 text-white">blocks-2</div>
+        <div class="blocks-4 w-8 h-8 background-blue-8">blocks-4</div>
+        <div class="blocks-2 w-8 h-8 background-blue-11">blocks-2</div>
+    </div>
+    <h4>There are quite a bit more traditional classes available. If you are familiar with flexbox, these may be
+        helpful:</h4>
+    <p>.center-blocks {
+        justify-content: center;
+        }
+
+        <br>.start-blocks {
+        justify-content: start;
+        }
+
+        <br>.end-blocks {
+        justify-content: end;
+        }
+
+        <br>.space-between-blocks {
+        justify-content: space-between;
+        }
+
+        <br>.space-evenly-blocks {
+        justify-content: space-evenly;
+        }
+
+        <br>.space-around-blocks {
+        justify-content: space-around;
+        }
+
+        <br>.center-blocks-secondary {
+        align-items: center;
+        }
+
+        <br>.stretch-blocks-secondary {
+        align-items: space-between;
+        }
+
+        <br>.start-blocks-secondary {
+        align-items: space-evenly;
+        }
+
+        <br>.end-blocks-secondary {
+        align-items: space-around;
+        }
+
+        <br>.base-blocks-secondary {
+        align-items: baseline;
+        }
+
+        <br>.blocks-content-start {
+        align-content: flex-start;
+        }
+
+        <br>.blocks-content-end {
+        align-content: flex-end;
+        }
+
+        <br>.blocks-content-center {
+        align-content: center;
+        }
+
+        <br>.blocks-content-stretch {
+        align-content: stretch;
+        }
+        <br>.blocks-content-space-between {
+        align-content: space-between;
+        }
+
+        <br>.blocks-content-space-around {
+        align-content: space-around;
+        }
+
+        <br>.wrap-blocks {
+        flex-wrap: wrap;
+        }
+
+    </p>
+</body>
+
+</html>

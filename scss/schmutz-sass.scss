@@ -1,0 +1,958 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+}
+
+// =================== variables =================
+$pixel0: 0px;
+$pixel1: 2px;
+$pixel2: 5px;
+$pixel3: 10px;
+$pixel4: 15px;
+$pixel5: 25px;
+$pixel6: 40px;
+$pixel7: 60px;
+$pixel8: 100px;
+$pixel9: 150px;
+$pixel10: 200px;
+$pixel11: 300px;
+$pixel12: 400px;
+
+$percent0: 5%;
+$percent1: 10%;
+$percent2: 20%;
+$percent3: 25%;
+$percent4: 33.33%;
+$percent5: 40%;
+$percent6: 50%;
+$percent7: 60%;
+$percent8: 66.67%;
+$percent9: 75%;
+$percent10: 80%;
+$percent11: 90%;
+$percent12: 100%;
+
+$border0: 0px;
+$border1: 1px;
+$border2: 2px;
+$border3: 3px;
+$border4: 5px;
+$border5: 7px;
+$border6: 10px;
+$border7: 15px;
+$border8: 20px;
+$border9: 35px;
+$border10: 50px;
+$border11: 100px;
+$border12: 200px;
+
+$pixels: $pixel0, $pixel1, $pixel2, $pixel3, $pixel4, $pixel5, $pixel6, $pixel7,
+  $pixel8, $pixel9, $pixel10, $pixel11, $pixel12;
+
+$percents: $percent0, $percent1, $percent2, $percent3, $percent4, $percent5,
+  $percent6, $percent7, $percent8, $percent9, $percent10, $percent11, $percent12;
+
+$borders: $border0, $border1, $border2, $border3, $border4, $border5, $border6,
+  $border7, $border8, $border9, $border10, $border11, $border12;
+
+$borderStyles: "dotted", "dashed", "double", "inset", "outset", "none", "hidden",
+  "groove", "ridge";
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+$gray0: rgb(18, 18, 18);
+$gray1: rgb(36, 36, 36);
+$gray2: rgb(54, 54, 54);
+$gray3: rgb(72, 72, 72);
+$gray4: rgb(90, 90, 90);
+$gray5: rgb(108, 108, 108);
+$gray6: rgb(126, 126, 126);
+$gray7: rgb(144, 144, 144);
+$gray8: rgb(162, 162, 162);
+$gray9: rgb(180, 180, 180);
+$gray10: rgb(198, 198, 198);
+$gray11: rgb(216, 216, 216);
+$gray12: rgb(234, 234, 234);
+
+$red0: rgb(73, 0, 0);
+$red1: rgb(102, 0, 0);
+$red2: rgb(135, 0, 0);
+$red3: rgb(155, 0, 0);
+$red4: rgb(175, 0, 0);
+$red5: rgb(195, 0, 0);
+$red6: rgb(215, 0, 0);
+$red7: rgb(235, 0, 0);
+$red8: rgb(255, 0, 0);
+$red9: rgb(255, 25, 25);
+$red10: rgb(255, 50, 50);
+$red11: rgb(255, 75, 75);
+$red12: rgb(255, 100, 100);
+
+$green0: rgb(0, 45, 0);
+$green1: rgb(0, 75, 0);
+$green2: rgb(0, 105, 0);
+$green3: rgb(0, 135, 0);
+$green4: rgb(0, 165, 0);
+$green5: rgb(0, 195, 0);
+$green6: rgb(0, 225, 0);
+$green7: rgb(0, 255, 0);
+$green8: rgb(40, 255, 40);
+$green9: rgb(80, 255, 80);
+$green10: rgb(120, 255, 120);
+$green11: rgb(160, 255, 160);
+$green12: rgb(200, 255, 200);
+
+$blue0: rgb(0, 0, 45);
+$blue1: rgb(0, 0, 75);
+$blue2: rgb(0, 0, 105);
+$blue3: rgb(0, 0, 135);
+$blue4: rgb(0, 0, 165);
+$blue5: rgb(0, 0, 195);
+$blue6: rgb(0, 0, 225);
+$blue7: rgb(0, 0, 255);
+$blue8: rgb(40, 40, 255);
+$blue9: rgb(80, 80, 255);
+$blue10: rgb(120, 120, 255);
+$blue11: rgb(160, 160, 255);
+$blue12: rgb(200, 200, 255);
+
+$yellow0: rgb(100, 100, 0);
+$yellow1: rgb(122, 122, 0);
+$yellow2: rgb(144, 144, 0);
+$yellow3: rgb(167, 167, 0);
+$yellow4: rgb(189, 189, 0);
+$yellow5: rgb(211, 211, 0);
+$yellow6: rgb(233, 233, 0);
+$yellow7: rgb(255, 255, 0);
+$yellow8: rgb(255, 255, 42);
+$yellow9: rgb(255, 255, 84);
+$yellow10: rgb(255, 255, 126);
+$yellow11: rgb(255, 255, 168);
+$yellow12: rgb(255, 255, 210);
+
+$orange0: rgb(88, 44, 0);
+$orange1: rgb(116, 58, 0);
+$orange2: rgb(144, 72, 0);
+$orange3: rgb(172, 86, 0);
+$orange4: rgb(200, 100, 0);
+$orange5: rgb(228, 114, 0);
+$orange6: rgb(255, 128, 0);
+$orange7: rgb(255, 150, 50);
+$orange8: rgb(255, 167, 81);
+$orange9: rgb(255, 184, 112);
+$orange10: rgb(255, 201, 143);
+$orange11: rgb(255, 218, 174);
+$orange12: rgb(255, 235, 205);
+
+$purple0: rgb(35, 0, 35);
+$purple1: rgb(55, 0, 55);
+$purple2: rgb(75, 0, 75);
+$purple3: rgb(95, 0, 95);
+$purple4: rgb(115, 0, 115);
+$purple5: rgb(135, 0, 135);
+$purple6: rgb(155, 0, 155);
+$purple7: rgb(175, 40, 175);
+$purple8: rgb(195, 80, 195);
+$purple9: rgb(215, 120, 215);
+$purple10: rgb(225, 140, 225);
+$purple11: rgb(240, 170, 240);
+$purple12: rgb(255, 200, 255);
+
+$aqua0: rgb(0, 50, 50);
+$aqua1: rgb(0, 79, 79);
+$aqua2: rgb(0, 108, 108);
+$aqua3: rgb(0, 138, 138);
+$aqua4: rgb(0, 167, 167);
+$aqua5: rgb(0, 196, 196);
+$aqua6: rgb(0, 225, 225);
+$aqua7: rgb(35, 255, 255);
+$aqua8: rgb(70, 255, 255);
+$aqua9: rgb(105, 255, 255);
+$aqua10: rgb(140, 255, 255);
+$aqua11: rgb(175, 255, 255);
+$aqua12: rgb(210, 255, 255);
+
+$pink0: rgb(107, 0, 57);
+$pink1: rgb(156, 0, 85);
+$pink2: rgb(205, 0, 113);
+$pink3: rgb(255, 0, 136);
+$pink4: rgb(255, 33, 158);
+$pink5: rgb(255, 67, 180);
+$pink6: rgb(255, 100, 203);
+$pink7: rgb(255, 125, 211);
+$pink8: rgb(255, 145, 218);
+$pink9: rgb(255, 165, 225);
+$pink10: rgb(255, 185, 232);
+$pink11: rgb(255, 205, 239);
+$pink12: rgb(255, 225, 245);
+
+$skyblue0: rgb(0, 30, 50);
+$skyblue1: rgb(0, 50, 84);
+$skyblue2: rgb(0, 70, 118);
+$skyblue3: rgb(0, 90, 152);
+$skyblue4: rgb(0, 110, 186);
+$skyblue5: rgb(0, 130, 220);
+$skyblue6: rgb(0, 150, 255);
+$skyblue7: rgb(51, 173, 255);
+$skyblue8: rgb(102, 191, 255);
+$skyblue9: rgb(118, 202, 255);
+$skyblue10: rgb(135, 213, 255);
+$skyblue11: rgb(169, 224, 255);
+$skyblue12: rgb(204, 235, 255);
+
+$baseColors: $black, $white;
+
+$grays: $gray0, $gray1, $gray2, $gray3, $gray4, $gray5, $gray6, $gray7, $gray8,
+  $gray9, $gray10, $gray11, $gray12;
+
+$reds: $red0, $red1, $red2, $red3, $red4, $red5, $red6, $red7, $red8, $red9,
+  $red10, $red11, $red12;
+
+$greens: $green0, $green1, $green2, $green3, $green4, $green5, $green6, $green7,
+  $green8, $green9, $green10, $green11, $green12;
+
+$blues: $blue0, $blue1, $blue2, $blue3, $blue4, $blue5, $blue6, $blue7, $blue8,
+  $blue9, $blue10, $blue11, $blue12;
+
+$yellows: $yellow0, $yellow1, $yellow2, $yellow3, $yellow4, $yellow5, $yellow6,
+  $yellow7, $yellow8, $yellow9, $yellow10, $yellow11, $yellow12;
+
+$purples: $purple0, $purple1, $purple2, $purple3, $purple4, $purple5, $purple6,
+  $purple7, $purple8, $purple9, $purple10, $purple11, $purple12;
+
+$oranges: $orange0, $orange1, $orange2, $orange3, $orange4, $orange5, $orange6,
+  $orange7, $orange8, $orange9, $orange10, $orange11, $orange12;
+
+$aquas: $aqua0, $aqua1, $aqua2, $aqua3, $aqua4, $aqua5, $aqua6, $aqua7, $aqua8,
+  $aqua9, $aqua10, $aqua11, $aqua12;
+
+$pinks: $pink0, $pink1, $pink2, $pink3, $pink4, $pink5, $pink6, $pink7, $pink8,
+  $pink9, $pink10, $pink11, $pink12;
+
+$skyblues: $skyblue0, $skyblue1, $skyblue2, $skyblue3, $skyblue4, $skyblue5,
+  $skyblue6, $skyblue7, $skyblue8, $skyblue9, $skyblue10, $skyblue11, $skyblue12;
+
+// ================================== colors =======================
+$colors: (
+  gray: $grays,
+  red: $reds,
+  green: $greens,
+  blue: $blues,
+  yellow: $yellows,
+  orange: $oranges,
+  purple: $purples,
+  aqua: $aquas,
+  pink: $pinks,
+  skyblue: $skyblues
+);
+
+@each $color, $hues in $colors {
+  @each $hue in $hues {
+    $i: index($hues, $hue) - 1;
+    .text-#{$color}-#{$i} {
+      color: $hue;
+    }
+    .background-#{$color}-#{$i} {
+      background-color: $hue;
+    }
+    .border-#{$color}-#{$i} {
+      border-color: $hue;
+    }
+  }
+}
+
+@each $color in $baseColors {
+  .text-#{$color} {
+    color: #{$color};
+  }
+  .background-#{$color} {
+    background-color: #{$color};
+  }
+  .border-#{$color} {
+    border-color: #{$color};
+  }
+}
+
+// ================================== general =======================
+.center-text-x,
+.center-text {
+  text-align: center;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+.removed {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+.text-center {
+  text-align: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear-float {
+  clear: both;
+}
+
+// ================================== text sizes =======================
+
+h1 {
+  font-size: 72px;
+  line-height: 108px;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 75px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h6 {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// ================================== height and width =======================
+
+.w-auto {
+  width: auto;
+}
+
+.h-auto {
+  height: auto;
+}
+
+@each $pixel in $pixels {
+  $i: index($pixels, $pixel)-1;
+  .w-#{$i} {
+    width: $pixel;
+  }
+  .h-#{$i} {
+    height: $pixel;
+  }
+}
+@each $percent in $percents {
+  $i: index($percents, $percent)-1;
+  .wp-#{$i} {
+    width: $percent;
+  }
+  .hp-#{$i} {
+    height: $percent;
+  }
+}
+
+// ================================== opacity =======================
+
+.opaque-0 {
+  opacity: 1;
+}
+
+.opaque-1 {
+  opacity: 0.98;
+}
+
+.opaque-2 {
+  opacity: 0.95;
+}
+
+.opaque-3 {
+  opacity: 0.9;
+}
+
+.opaque-4 {
+  opacity: 0.85;
+}
+
+.opaque-5 {
+  opacity: 0.8;
+}
+
+.opaque-6 {
+  opacity: 0.75;
+}
+
+.opaque-7 {
+  opacity: 0.6;
+}
+
+.opaque-8 {
+  opacity: 0.5;
+}
+
+.opaque-9 {
+  opacity: 0.4;
+}
+
+.opaque-10 {
+  opacity: 0.25;
+}
+
+.opaque-11 {
+  opacity: 0.1;
+}
+
+.opaque-12 {
+  opacity: 0;
+}
+
+// ================================== padding and margin =======================
+@each $pixel in $pixels {
+  $i: index($pixels, $pixel)-1;
+  .p-#{$i} {
+    padding: $pixel;
+  }
+  .p-t-#{$i} {
+    padding-top: $pixel;
+  }
+  .p-b-#{$i} {
+    padding-bottom: $pixel;
+  }
+  .p-l-#{$i} {
+    padding-left: $pixel;
+  }
+  .p-r-#{$i} {
+    padding-right: $pixel;
+  }
+  .p-x-#{$i} {
+    padding-left: $pixel;
+    padding-right: $pixel;
+  }
+  .p-y-#{$i} {
+    padding-top: $pixel;
+    padding-bottom: $pixel;
+  }
+  .m-#{$i} {
+    margin: $pixel;
+  }
+  .m-t-#{$i} {
+    margin-top: $pixel;
+  }
+  .m-b-#{$i} {
+    margin-bottom: $pixel;
+  }
+  .m-l-#{$i} {
+    margin-left: $pixel;
+  }
+  .m-r-#{$i} {
+    margin-right: $pixel;
+  }
+  .m-x-#{$i} {
+    margin-left: $pixel;
+    margin-right: $pixel;
+  }
+  .m-y-#{$i} {
+    margin-top: $pixel;
+    margin-bottom: $pixel;
+  }
+}
+
+@each $percent in $percents {
+  $i: index($percents, $percent)-1;
+  .pp-#{$i} {
+    padding: $percent;
+  }
+  .pp-t-#{$i} {
+    padding-top: $percent;
+  }
+  .pp-b-#{$i} {
+    padding-bottom: $percent;
+  }
+  .pp-l-#{$i} {
+    padding-left: $percent;
+  }
+  .pp-r-#{$i} {
+    padding-right: $percent;
+  }
+  .pp-x-#{$i} {
+    padding-left: $percent;
+    padding-right: $percent;
+  }
+  .pp-y-#{$i} {
+    padding-top: $percent;
+    padding-bottom: $percent;
+  }
+  .mp-#{$i} {
+    margin: $percent;
+  }
+  .mp-t-#{$i} {
+    margin-top: $percent;
+  }
+  .mp-b-#{$i} {
+    margin-bottom: $percent;
+  }
+  .mp-l-#{$i} {
+    margin-left: $percent;
+  }
+  .mp-r-#{$i} {
+    margin-right: $percent;
+  }
+  .mp-x-#{$i} {
+    margin-left: $percent;
+    margin-right: $percent;
+  }
+  .mp-y-#{$i} {
+    margin-top: $percent;
+    margin-bottom: $percent;
+  }
+}
+
+@each $pixel in $pixels {
+  $i: index($pixels, $pixel)-1;
+  .fixed-r-#{$i} {
+    position: fixed;
+    right: $pixel;
+  }
+  .fixed-l-#{$i} {
+    position: fixed;
+    left: $pixel;
+  }
+  .fixed-t-#{$i} {
+    position: fixed;
+    top: $pixel;
+  }
+  .fixed-b-#{$i} {
+    position: fixed;
+    bottom: $pixel;
+  }
+  .absolute-r-#{$i} {
+    position: absolute;
+    right: $pixel;
+  }
+  .absolute-l-#{$i} {
+    position: absolute;
+    left: $pixel;
+  }
+  .absolute-t-#{$i} {
+    position: absolute;
+    top: $pixel;
+  }
+  .absolute-b-#{$i} {
+    position: absolute;
+    bottom: $pixel;
+  }
+}
+@each $percent in $percents {
+  $i: index($percents, $percent)-1;
+  .fixedp-r-#{$i} {
+    position: fixed;
+    right: $percent;
+  }
+  .fixedp-l-#{$i} {
+    position: fixed;
+    left: $percent;
+  }
+  .fixedp-t-#{$i} {
+    position: fixed;
+    top: $percent;
+  }
+  .fixedp-b-#{$i} {
+    position: fixed;
+    bottom: $percent;
+  }
+  .absolutep-r-#{$i} {
+    position: absolute;
+    right: $percent;
+  }
+  .absolutep-l-#{$i} {
+    position: absolute;
+    left: $percent;
+  }
+  .absolutep-t-#{$i} {
+    position: absolute;
+    top: $percent;
+  }
+  .absolutep-b-#{$i} {
+    position: absolute;
+    bottom: $percent;
+  }
+}
+
+// ================= z-indez ================
+
+.z-0 {
+  z-index: -10;
+}
+
+.z-1 {
+  z-index: -5;
+}
+
+.z-2 {
+  z-index: -1;
+}
+
+.z-3 {
+  z-index: 0;
+}
+
+.z-4 {
+  z-index: 1;
+}
+
+.z-5 {
+  z-index: 2;
+}
+
+.z-6 {
+  z-index: 5;
+}
+
+.z-7 {
+  z-index: 10;
+}
+
+.z-8 {
+  z-index: 15;
+}
+
+.z-9 {
+  z-index: 50;
+}
+
+.z-10 {
+  z-index: 55;
+}
+
+.z-11 {
+  z-index: 100;
+}
+
+.z-12 {
+  z-index: 1050;
+}
+
+// ======================  borders ================
+
+@each $border in $borders {
+  $i: index($borders, $border)-1;
+  .border-#{$i} {
+    border-width: $border;
+    border-style: solid;
+  }
+  .border-t-#{$i} {
+    border-top-width: $border;
+    border-top-style: solid;
+  }
+  .border-b-#{$i} {
+    border-bottom-width: $border;
+    border-bottom-style: solid;
+  }
+  .border-l-#{$i} {
+    border-left-width: $border;
+    border-left-style: solid;
+  }
+  .border-r-#{$i} {
+    border-right-width: $border;
+    border-right-style: solid;
+  }
+  .border-x-#{$i} {
+    border-left-width: $border;
+    border-right-width: $border;
+    border-right-style: solid;
+    border-left-style: solid;
+  }
+  .border-y-#{$i} {
+    border-top-width: $border;
+    border-bottom-width: $border;
+    border-top-style: solid;
+    border-bottom-style: solid;
+  }
+  .border-radius-#{$i} {
+    border-radius: $border;
+  }
+  .border-radius-tr-#{$i} {
+    border-top-right-radius: $border;
+  }
+  .border-radius-tl-#{$i} {
+    border-top-left-radius: $border;
+  }
+  .border-radius-br-#{$i} {
+    border-bottom-right-radius: $border;
+  }
+  .border-radius-bl-#{$i} {
+    border-bottom-left-radius: $border;
+  }
+  .border-radius-t-#{$i} {
+    border-top-right-radius: $border;
+    border-top-left-radius: $border;
+  }
+  .border-radius-b-#{$i} {
+    border-bottom-right-radius: $border;
+    border-bottom-left-radius: $border;
+  }
+  .border-radius-l-#{$i} {
+    border-top-left-radius: $border;
+    border-bottom-left-radius: $border;
+  }
+  .border-radius-r-#{$i} {
+    border-bottom-right-radius: $border;
+    border-top-right-radius: $border;
+  }
+}
+
+@each $percent in $percents {
+  $i: index($percents, $percent) - 1;
+  .borderp-#{$i} {
+    border-width: $percent;
+    border-style: solid;
+  }
+  .borderp-t-#{$i} {
+    border-top-width: $percent;
+    border-top-style: solid;
+  }
+  .borderp-b-#{$i} {
+    border-bottom-width: $percent;
+    border-bottom-style: solid;
+  }
+  .borderp-l-#{$i} {
+    border-left-width: $percent;
+    border-left-style: solid;
+  }
+  .borderp-r-#{$i} {
+    border-right-width: $percent;
+    border-right-style: solid;
+  }
+  .borderp-x-#{$i} {
+    border-left-width: $percent;
+    border-right-width: $percent;
+    border-right-style: solid;
+    border-left-style: solid;
+  }
+  .borderp-y-#{$i} {
+    border-top-width: $percent;
+    border-bottom-width: $percent;
+    border-top-style: solid;
+    border-bottom-style: solid;
+  }
+
+  .border-radiusp-#{$i} {
+    border-radius: $percent;
+  }
+  .border-radiusp-tr-#{$i} {
+    border-top-right-radius: $percent;
+  }
+  .border-radiusp-tl-#{$i} {
+    border-top-left-radius: $percent;
+  }
+  .border-radiusp-br-#{$i} {
+    border-bottom-right-radius: $percent;
+  }
+  .border-radiusp-bl-#{$i} {
+    border-bottom-left-radius: $percent;
+  }
+  .border-radiusp-t-#{$i} {
+    border-top-right-radius: $percent;
+    border-top-left-radius: $percent;
+  }
+  .border-radiusp-b-#{$i} {
+    border-bottom-right-radius: $percent;
+    border-bottom-left-radius: $percent;
+  }
+  .border-radiusp-l-#{$i} {
+    border-top-left-radius: $percent;
+    border-bottom-left-radius: $percent;
+  }
+  .border-radiusp-r-#{$i} {
+    border-bottom-right-radius: $percent;
+    border-top-right-radius: $percent;
+  }
+}
+
+.dotted-border {
+  border-style: dotted;
+}
+.dashed-border {
+  border-style: dashed;
+}
+.solid-border {
+  border-style: solid;
+}
+.double-border {
+  border-style: double;
+}
+.groove-border {
+  border-style: groove;
+}
+.groove-border {
+  border-style: groove;
+}
+.ridge-border {
+  border-style: ridge;
+}
+.inset-border {
+  border-style: inset;
+}
+.outset-border {
+  border-style: outset;
+}
+.no-border {
+  border-style: none;
+}
+.hidden-border {
+  border-style: hidden;
+}
+
+// =======================  grid =======================
+
+.reverse-y-blocks {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.y-blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.x-blocks,
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reverse-x-blocks {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.center-blocks {
+  justify-content: center;
+}
+
+.start-blocks {
+  justify-content: start;
+}
+
+.end-blocks {
+  justify-content: end;
+}
+
+.space-between-blocks {
+  justify-content: space-between;
+}
+
+.space-evenly-blocks {
+  justify-content: space-evenly;
+}
+
+.space-around-blocks {
+  justify-content: space-around;
+}
+
+.center-blocks-secondary {
+  align-items: center;
+}
+
+.stretch-blocks-secondary {
+  align-items: space-between;
+}
+
+.start-blocks-secondary {
+  align-items: space-evenly;
+}
+
+.end-blocks-secondary {
+  align-items: space-around;
+}
+
+.base-blocks-secondary {
+  align-items: baseline;
+}
+
+.blocks-content-start {
+  align-content: flex-start;
+}
+
+.blocks-content-end {
+  align-content: flex-end;
+}
+
+.blocks-content-center {
+  align-content: center;
+}
+
+.blocks-content-stretch {
+  align-content: stretch;
+}
+.blocks-content-space-between {
+  align-content: space-between;
+}
+
+.blocks-content-space-around {
+  align-content: space-around;
+}
+
+.wrap-blocks {
+  flex-wrap: wrap;
+}
+.blocks-break {
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .blocks-#{$i} {
+    width: #{8% * $i};
+  }
+
+  .full-blocks > .blocks-#{$i} {
+    width: #{8.3333333333% * $i};
+  }
+}
